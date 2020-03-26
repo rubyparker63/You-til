@@ -10,8 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".DiceRollActivity12"
+            android:label="@string/title_activity_dice_roll12"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".DiceRollActivity10"
+            android:label="@string/title_activity_dice_roll10"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DiceRollActivity8"
+            android:label="@string/title_activity_dice_roll8"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DiceRollActivity6"
+            android:label="@string/title_activity_dice_roll6"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DiceRollActivity4" />
+        <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".QuickAcessActivity"
             android:label="@string/title_activity_quick_acess"
