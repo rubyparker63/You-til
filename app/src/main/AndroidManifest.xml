@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DiceRollActivity8Fix"></activity>
+        <activity android:name=".DiceRollActivity4Fix" />
+        <activity android:name=".DiceRollActivity6fix" />
         <activity
             android:name=".DiceRollActivity12"
             android:label="@string/title_activity_dice_roll12"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DiceRollActivity10"
             android:label="@string/title_activity_dice_roll10"
