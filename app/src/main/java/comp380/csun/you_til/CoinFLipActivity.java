@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import comp380.csun.you_til.R;
 
+import java.util.Random;
+
 public class CoinFLipActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,7 @@ public class CoinFLipActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coin_f_lip);
 
-        final TextView coinTxt = (TextView)findViewById(R.id.coinFlipButton);
+        final TextView coinTxt = (TextView)findViewById(R.id.textView6);
 
         ImageView Coin = (ImageView)findViewById(R.id.imageView5);
         Coin.setImageResource(R.drawable.coin);
