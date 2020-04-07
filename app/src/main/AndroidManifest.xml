@@ -9,26 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DiceRollActivity8Fix"></activity>
+        <activity android:name=".DiceRollActivity20"></activity>
+        <activity android:name=".DiceRollActivity12Fix" />
+        <activity android:name=".DiceRollActivity10Fix" />
+        <activity android:name=".DiceRollActivity8Fix" />
         <activity android:name=".DiceRollActivity4Fix" />
         <activity android:name=".DiceRollActivity6fix" />
-        <activity
-            android:name=".DiceRollActivity12"
-            android:label="@string/title_activity_dice_roll12"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".DiceRollActivity10"
-            android:label="@string/title_activity_dice_roll10"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".DiceRollActivity8"
-            android:label="@string/title_activity_dice_roll8"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".DiceRollActivity6"
-            android:label="@string/title_activity_dice_roll6"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DiceRollActivity4" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
@@ -41,7 +27,6 @@
         <activity android:name=".UnitSelectActivity" />
         <activity android:name=".TipCalculatorActivity" />
         <activity android:name=".CoinFLipActivity" />
-        <activity android:name=".DiceRollActivity" />
         <activity android:name=".DiceRollSelectActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

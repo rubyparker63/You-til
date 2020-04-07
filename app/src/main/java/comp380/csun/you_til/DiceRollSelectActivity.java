@@ -45,6 +45,32 @@ public class DiceRollSelectActivity extends AppCompatActivity {
                 startActivity(goToDieEight);
             }
         });
+        ImageButton dieSelect10Btn = (ImageButton) findViewById(R.id.dice10Button);
+        dieSelect10Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToDieTen = new Intent(getApplicationContext(), DiceRollActivity10Fix.class);
+                startActivity(goToDieTen);
+            }
+        });
+
+        ImageButton dieSelect12Btn = (ImageButton) findViewById(R.id.dice12Button);
+        dieSelect12Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToDieTwelve = new Intent(getApplicationContext(), DiceRollActivity12Fix.class);
+                startActivity(goToDieTwelve);
+            }
+        });
+
+        ImageButton dieSelect20Btn = (ImageButton) findViewById(R.id.dice20Button);
+        dieSelect20Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToDieTwenty = new Intent(getApplicationContext(), DiceRollActivity20.class);
+                startActivity(goToDieTwenty);
+            }
+        });
 
     }
 
