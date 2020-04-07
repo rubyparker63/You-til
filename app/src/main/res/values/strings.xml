@@ -41,4 +41,5 @@
     <string name="title_activity_dice_roll8">DiceRollActivity8</string>
     <string name="title_activity_dice_roll10">DiceRollActivity10</string>
     <string name="title_activity_dice_roll12">DiceRollActivity12</string>
+    <string name="selectDieTitle">Select Die To Roll</string>
 </resources>
