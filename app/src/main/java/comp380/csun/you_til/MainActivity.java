@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         conversionActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToConversion = new Intent(getApplicationContext(), ConversionActivity.class);
+                Intent goToConversion = new Intent(getApplicationContext(), UnitSelectActivity.class);
                 startActivity(goToConversion);
             }
         });

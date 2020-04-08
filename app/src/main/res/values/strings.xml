@@ -42,4 +42,37 @@
     <string name="title_activity_dice_roll10">DiceRollActivity10</string>
     <string name="title_activity_dice_roll12">DiceRollActivity12</string>
     <string name="selectDieTitle">Select Die To Roll</string>
+    
+    <string-array name="TemeratureOptions">
+        <item>Kelvin</item>
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+    </string-array>
+
+    <string-array name="VolumeOptions">
+        <item>Quarts</item>
+        <item>Ounces</item>
+        <item>Cups</item>
+        <item>Gallons</item>
+        <item>Liters</item>
+        <item>Milliliters</item>
+        <item>Tablespoon</item>
+        <item>Teaspoon</item>
+    </string-array>
+    <string-array name="SpeedOptions">
+        <item>Miles Per Hour</item>
+        <item>Feet Per Second</item>
+        <item>Kilometers Per Hour</item>
+        <item>Meters Per Second</item>
+    </string-array>
+
+    <string-array name="DistanceOptions">
+        <item>Kilometers</item>
+        <item>Meters</item>
+        <item>Miles</item>
+        <item>Yards</item>
+        <item>Feet</item>
+        <item>Inches</item>
+    </string-array>
+
 </resources>
