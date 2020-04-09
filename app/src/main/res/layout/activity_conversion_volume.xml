@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConversionTempActivity">
+    tools:context=".ConversionVolumeActivity">
 
     <TextView
-        android:id="@+id/tempTextView1"
+        android:id="@+id/volumeTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
+        android:text="@string/volume"
         android:textColor="#000000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,26 +18,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/tempSpinner1"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
+    <EditText
+        android:id="@+id/volumeInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:text="@string/your_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempFromTextView" />
-
-    <Spinner
-        android:id="@+id/tempSpinner2"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempToTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeTextView1" />
 
     <TextView
-        android:id="@+id/tempFromTextView"
+        android:id="@+id/volumeFromTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_unit_to_convert_from"
@@ -46,24 +40,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempInputEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeInputEditText" />
 
-    <EditText
-        android:id="@+id/tempInputEditText"
-        android:layout_width="225dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number|numberDecimal"
-        android:text="@string/your_number"
-        android:textSize="24sp"
+    <Spinner
+        android:id="@+id/volumeSpinner1"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempTextView1" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeFromTextView" />
+
+    <Spinner
+        android:id="@+id/volumeSpinner2"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volumeToTextView" />
 
     <TextView
-        android:id="@+id/tempToTextView"
+        android:id="@+id/volumeToTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_unit_to_convert_to"
@@ -72,27 +70,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempSpinner1" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeSpinner1" />
 
     <TextView
-        android:id="@+id/convToTempTextView"
+        android:id="@+id/volumeTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempSpinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeSpinner2" />
 
     <Button
-        android:id="@+id/tempEnterButton"
+        android:id="@+id/volumeEnterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/convert"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/convToTempTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/volumeTextView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

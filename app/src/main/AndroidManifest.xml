@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ConversionTempActivity"></activity>
+        <activity android:name=".ConversionVolumeActivity"></activity>
+        <activity android:name=".ConversionLengthActivity" />
+        <activity android:name=".ConversionSpeedActivity" />
+        <activity android:name=".ConversionTempActivity" />
         <activity android:name=".DiceRollActivity20" />
         <activity android:name=".DiceRollActivity12Fix" />
         <activity android:name=".DiceRollActivity10Fix" />

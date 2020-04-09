@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConversionTempActivity">
+    tools:context=".ConversionSpeedActivity">
 
     <TextView
-        android:id="@+id/tempTextView1"
+        android:id="@+id/speedTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/temperature"
+        android:text="@string/speed"
         android:textColor="#000000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,26 +18,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/tempSpinner1"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
+    <EditText
+        android:id="@+id/speedInputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:text="Your Number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempFromTextView" />
-
-    <Spinner
-        android:id="@+id/tempSpinner2"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempToTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/speedTextView1" />
 
     <TextView
-        android:id="@+id/tempFromTextView"
+        android:id="@+id/speedFromTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select_unit_to_convert_from"
@@ -46,53 +41,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempInputEditText" />
-
-    <EditText
-        android:id="@+id/tempInputEditText"
-        android:layout_width="225dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="number|numberDecimal"
-        android:text="@string/your_number"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempTextView1" />
+        app:layout_constraintTop_toBottomOf="@+id/speedInputEditText" />
 
     <TextView
-        android:id="@+id/tempToTextView"
+        android:id="@+id/speedTpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select_unit_to_convert_to"
+        android:text="Select Unit to Convert To"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempSpinner1" />
+        app:layout_constraintTop_toBottomOf="@+id/speedSpinner1" />
 
-    <TextView
-        android:id="@+id/convToTempTextView"
+    <Spinner
+        android:id="@+id/speedSpinner1"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedFromTextView" />
+
+    <Spinner
+        android:id="@+id/speedSpinner2"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedTpTextView" />
+
+    <Button
+        android:id="@+id/speedEbterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
+        android:text="Convert"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedTextView2" />
+
+    <TextView
+        android:id="@+id/speedTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempSpinner2" />
-
-    <Button
-        android:id="@+id/tempEnterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/convert"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/convToTempTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/speedSpinner2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

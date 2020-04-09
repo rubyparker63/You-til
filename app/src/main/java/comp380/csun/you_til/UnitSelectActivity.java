@@ -24,5 +24,33 @@ public class UnitSelectActivity extends AppCompatActivity {
                 startActivity(goToTemp);
             }
         });
+
+        Button speedBtn = (Button) findViewById(R.id.speedChooseButton);
+        speedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToSpeed = new Intent(getApplicationContext(), ConversionSpeedActivity.class);
+                startActivity(goToSpeed);
+            }
+        });
+
+        Button lengthBtn = (Button) findViewById(R.id.lengthChooseButton);
+        lengthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToLength = new Intent(getApplicationContext(), ConversionLengthActivity.class);
+                startActivity(goToLength);
+            }
+        });
+
+        Button volumeBtn = (Button) findViewById(R.id.volumeChooseButton);
+        volumeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToVolume = new Intent(getApplicationContext(), ConversionVolumeActivity.class);
+                startActivity(goToVolume);
+            }
+        });
+
     }
 }

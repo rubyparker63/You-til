@@ -42,7 +42,16 @@
     <string name="title_activity_dice_roll10">DiceRollActivity10</string>
     <string name="title_activity_dice_roll12">DiceRollActivity12</string>
     <string name="selectDieTitle">Select Die To Roll</string>
-    
+    <string name="speed">Speed</string>
+    <string name="select_unit_to_convert_from">Select Unit to Convert From</string>
+    <string name="temperature">Temperature</string>
+    <string name="length">Length</string>
+    <string name="volume">Volume</string>
+    <string name="your_number">Your Number</string>
+    <string name="select_unit_to_convert_to">Select Unit to Convert To</string>
+    <string name="converted_number">Converted Number</string>
+    <string name="convert">Convert</string>
+
     <string-array name="TemeratureOptions">
         <item>Kelvin</item>
         <item>Celsius</item>
