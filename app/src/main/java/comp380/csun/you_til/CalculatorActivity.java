@@ -177,7 +177,7 @@ public class CalculatorActivity extends AppCompatActivity {
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
+               // compute();
 
                 if (textViewInput.getText().length() > 0) {
                     CharSequence name = textViewInput.getText().toString();
