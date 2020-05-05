@@ -5,9 +5,12 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="buttonAccent1">#9fb7e0</color>
     <color name="buttonAccent2">#a8cadb</color>
+    <color name="buttonAccent7">#bbeaff</color>
     <color name="buttonAccent3">#f2c9da</color>
     <color name="buttonAccent4">#ff919a</color>
     <color name="buttonAccent5">#bdf2d8</color>
+    <color name="buttonAccent6">#e6ffef</color>
+
     <color name="pinkBackground">#ffded1</color>
 
 

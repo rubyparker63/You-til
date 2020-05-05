@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".CoinFLipActivity">
 
-    <Button
-        android:id="@+id/coinFlipButton"
-        android:layout_width="188dp"
-        android:layout_height="59dp"
-        android:text="Flip Coin"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684"
-        tools:text="Flip Coin" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="290dp"
@@ -29,6 +15,21 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/coin" />
+
+    <Button
+        android:id="@+id/coinFlipButton"
+        android:layout_width="188dp"
+        android:layout_height="59dp"
+        android:background="@color/buttonAccent3"
+        android:text="Flip Coin"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.683"
+        tools:text="Flip Coin" />
 
     <TextView
         android:id="@+id/textView6"

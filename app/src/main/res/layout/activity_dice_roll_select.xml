@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pinkBackground"
     tools:context=".DiceRollSelectActivity">
 
     <TextView
@@ -26,7 +25,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginLeft="88dp"
         android:layout_marginTop="8dp"
-        android:text="Six Sided"
+        android:text="@string/six_sided"
         app:layout_constraintStart_toEndOf="@+id/textView4Sided"
         app:layout_constraintTop_toBottomOf="@+id/die6ImageView" />
 
@@ -36,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginTop="1dp"
-        android:text="Eight Sided"
+        android:layout_marginTop="20dp"
+        android:text="@string/eight_sided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/die8ImageView" />
 
@@ -47,8 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
-        android:layout_marginTop="1dp"
-        android:text="Ten Sided"
+        android:layout_marginTop="20dp"
+        android:text="@string/ten_sided"
         app:layout_constraintStart_toEndOf="@+id/textView8Sided"
         app:layout_constraintTop_toBottomOf="@+id/die10ImageView" />
 
@@ -59,7 +58,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="24dp"
-        android:text="Twelve Sided"
+        android:text="@string/twelve_sided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/die12ImageView" />
 
@@ -70,7 +69,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="20dp"
-        android:text="Twenty Sided"
+        android:text="@string/twenty_sided"
         app:layout_constraintStart_toEndOf="@+id/textView12Sided"
         app:layout_constraintTop_toBottomOf="@+id/die20ImageView" />
 
@@ -81,7 +80,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="8dp"
-        android:text="Four Sided"
+        android:text="@string/four_sided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/die4ImageView" />
 
@@ -118,8 +117,8 @@
         android:id="@+id/die8ImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4Sided"
@@ -129,8 +128,8 @@
         android:id="@+id/die10ImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/die8ImageView"
         app:layout_constraintTop_toBottomOf="@+id/textView6Sided"
@@ -183,8 +182,10 @@
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/textView8Sided"
         app:layout_constraintEnd_toEndOf="@+id/die8ImageView"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/die8ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die8ImageView" />
+        app:layout_constraintTop_toTopOf="@+id/die8ImageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/die10Button"
@@ -193,8 +194,10 @@
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/textView10Sided"
         app:layout_constraintEnd_toEndOf="@+id/die10ImageView"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/die10ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die10ImageView" />
+        app:layout_constraintTop_toTopOf="@+id/die10ImageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/die12Button"

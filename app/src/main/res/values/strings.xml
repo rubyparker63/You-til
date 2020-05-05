@@ -51,6 +51,12 @@
     <string name="select_unit_to_convert_to">Select Unit to Convert To</string>
     <string name="converted_number">Converted Number</string>
     <string name="convert">Convert</string>
+    <string name="six_sided">Six Sided</string>
+    <string name="eight_sided">Eight Sided</string>
+    <string name="four_sided">Four Sided</string>
+    <string name="ten_sided">Ten Sided</string>
+    <string name="twenty_sided">Twenty Sided</string>
+    <string name="twelve_sided">Twelve Sided</string>
 
     <string-array name="TemeratureOptions">
         <item>Kelvin</item>
