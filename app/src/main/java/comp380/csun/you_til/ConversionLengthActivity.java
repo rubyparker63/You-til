@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+
 public class ConversionLengthActivity extends AppCompatActivity {
 
     @Override
@@ -37,8 +39,6 @@ public class ConversionLengthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText lengthInputET = (EditText) findViewById(R.id.lengthImputEditText);
                 double lengthInput = Double.parseDouble(lengthInputET.getText().toString());
-
-
                 int from = lengthSpinnerFrom.getSelectedItemPosition();
                 int to = lengthSpinnerTo.getSelectedItemPosition();
                 convert(from, to, lengthInput);
@@ -47,7 +47,7 @@ public class ConversionLengthActivity extends AppCompatActivity {
         });
 
     }
-    
+
 
     public void convert(int from, int to, double origNumber){
         TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
@@ -204,11 +204,10 @@ public class ConversionLengthActivity extends AppCompatActivity {
             //error message
             unit = "error";
         }
-        resultTextView.setText(answer + unit);
-
-
-
-
+        BigDecimal round = new BigDecimal(answer);
+        round = round.setScale(3, BigDecimal.ROUND_HALF_UP);
+        double roundedAnswer = round.doubleValue();
+        resultTextView.setText(roundedAnswer + unit);
     }
 }
 

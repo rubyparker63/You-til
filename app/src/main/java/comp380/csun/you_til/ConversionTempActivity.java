@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+
 public class ConversionTempActivity extends AppCompatActivity {
 
     @Override
@@ -93,6 +95,9 @@ public class ConversionTempActivity extends AppCompatActivity {
             unit = "error";
 
             }
-        resultTextView.setText(answer + unit);
+        BigDecimal round = new BigDecimal(answer);
+        round = round.setScale(3, BigDecimal.ROUND_HALF_UP);
+        double roundedAnswer = round.doubleValue();
+        resultTextView.setText(roundedAnswer + unit);
         }
 }
