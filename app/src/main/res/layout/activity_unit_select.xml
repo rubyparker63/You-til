@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".UnitSelectActivity">
 
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="627dp"
+        android:layout_height="840dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
     <TextView
         android:id="@+id/convTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="72dp"
         android:background="@color/colorPrimaryDark"
         android:text="Choose What to Convert:"
         android:textColor="#000000"

@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".ConversionSpeedActivity">
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="555dp"
+        android:layout_height="813dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
     <TextView
         android:id="@+id/speedTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:background="@color/buttonAccent2"
         android:text="@string/speed"
         android:textColor="#000000"
@@ -24,11 +33,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Your Number"
         android:importantForAutofill="no"
         android:inputType="number|numberDecimal"
-        android:hint="Your Number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedTextView1" />
 
@@ -40,9 +48,40 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedInputEditText" />
+
+    <Spinner
+        android:id="@+id/speedSpinner2"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:background="@color/buttonAccent2"
+        android:popupBackground="@color/buttonAccent7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedTpTextView" />
+
+    <Spinner
+        android:id="@+id/speedSpinner1"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:background="@color/buttonAccent2"
+        android:popupBackground="@color/buttonAccent7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedFromTextView" />
+
+    <Button
+        android:id="@+id/speedEnterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedTextView2" />
 
     <TextView
         android:id="@+id/speedTpTextView"
@@ -52,42 +91,9 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedSpinner1" />
-
-    <Spinner
-        android:id="@+id/speedSpinner1"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:background="@color/buttonAccent2"
-        android:popupBackground="@color/buttonAccent7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speedFromTextView" />
-
-    <Spinner
-        android:id="@+id/speedSpinner2"
-        android:layout_width="409dp"
-        android:layout_height="50dp"
-        android:background="@color/buttonAccent2"
-        android:popupBackground="@color/buttonAccent7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speedTpTextView" />
-
-    <Button
-        android:id="@+id/speedEnterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Convert"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speedTextView2" />
 
     <TextView
         android:id="@+id/speedTextView2"
@@ -98,4 +104,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedSpinner2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

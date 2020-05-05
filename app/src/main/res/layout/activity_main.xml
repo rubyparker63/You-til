@@ -6,40 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="633dp"
+        android:layout_height="821dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
     <Button
         android:id="@+id/calcMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="76dp"
         android:background="@color/buttonAccent1"
         android:text="Calculator"
         android:textAllCaps="false"
         android:textSize="25sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/tipCalcMainButton"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:background="@color/buttonAccent2"
-        android:text="Tip Calculator"
+        android:id="@+id/diceMainButton"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/buttonAccent4"
+        android:text="Dice Roll"
         android:textAllCaps="false"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calcMainButton" />
+        app:layout_constraintTop_toBottomOf="@+id/conversionMainButton" />
 
     <Button
         android:id="@+id/conversionMainButton"
-        android:layout_width="214dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
         android:background="@color/buttonAccent5"
         android:text="Conversions"
         android:textAllCaps="false"
@@ -49,31 +57,30 @@
         app:layout_constraintTop_toBottomOf="@+id/tipCalcMainButton" />
 
     <Button
-        android:id="@+id/diceMainButton"
-        android:layout_width="207dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="52dp"
-        android:background="@color/buttonAccent4"
-        android:text="Dice Roll"
-        android:textAllCaps="false"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conversionMainButton" />
-
-    <Button
         android:id="@+id/coinMainButton"
-        android:layout_width="203dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
         android:background="@color/buttonAccent3"
         android:text="Coin Flip"
         android:textAllCaps="false"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diceMainButton" />
+
+    <Button
+        android:id="@+id/tipCalcMainButton"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/buttonAccent2"
+        android:text="Tip Calculator"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcMainButton" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
