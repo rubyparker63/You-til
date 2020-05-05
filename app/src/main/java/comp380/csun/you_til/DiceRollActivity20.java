@@ -122,6 +122,10 @@ public class DiceRollActivity20 extends AppCompatActivity {
                 Intent goToCoinFlipItem = new Intent(getApplicationContext(), CoinFLipActivity.class);
                 startActivity(goToCoinFlipItem);
                 return true;
+            case R.id.settingsItem:
+                Intent goToSettingsItem = new Intent(getApplicationContext(), SettingsActivityFix.class);
+                startActivity(goToSettingsItem);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
