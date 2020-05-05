@@ -20,57 +20,55 @@ public class DiceRollSelectActivity extends AppCompatActivity {
 
 
         //dice menu
-        ImageButton dieSelect4Btn = (ImageButton) findViewById(R.id.dice4Button);
-        dieSelect4Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect4Btn = (Button) findViewById(R.id.die4button);
+        diceSelect4Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieFour = new Intent(getApplicationContext(), DiceRollActivity4Fix.class);
                 startActivity(goToDieFour);
             }
         });
-
-        ImageButton dieSelect6Btn = (ImageButton) findViewById(R.id.dice6Button);
-        dieSelect6Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect6Btn = (Button) findViewById(R.id.die6Button);
+        diceSelect6Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieSix = new Intent(getApplicationContext(), DiceRollActivity6fix.class);
                 startActivity(goToDieSix);
             }
         });
-        ImageButton dieSelect8Btn = (ImageButton) findViewById(R.id.dice8Button);
-        dieSelect8Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect8Btn = (Button) findViewById(R.id.die8Button);
+        diceSelect8Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieEight = new Intent(getApplicationContext(), DiceRollActivity8Fix.class);
                 startActivity(goToDieEight);
             }
         });
-        ImageButton dieSelect10Btn = (ImageButton) findViewById(R.id.dice10Button);
-        dieSelect10Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect10Btn = (Button) findViewById(R.id.die10Button);
+        diceSelect10Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieTen = new Intent(getApplicationContext(), DiceRollActivity10Fix.class);
                 startActivity(goToDieTen);
             }
         });
-
-        ImageButton dieSelect12Btn = (ImageButton) findViewById(R.id.dice12Button);
-        dieSelect12Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect12Btn = (Button) findViewById(R.id.die12Button);
+        diceSelect12Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieTwelve = new Intent(getApplicationContext(), DiceRollActivity12Fix.class);
                 startActivity(goToDieTwelve);
             }
         });
-
-        ImageButton dieSelect20Btn = (ImageButton) findViewById(R.id.dice20Button);
-        dieSelect20Btn.setOnClickListener(new View.OnClickListener() {
+        Button diceSelect20Btn = (Button) findViewById(R.id.die20Button);
+        diceSelect20Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent goToDieTwenty = new Intent(getApplicationContext(), DiceRollActivity20.class);
                 startActivity(goToDieTwenty);
             }
         });
+
 
     }
 
