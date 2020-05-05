@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivityFix"></activity>
+        <activity android:name=".CustomTipActivity"></activity>
+        <activity android:name=".SettingsActivityFix" />
         <activity android:name=".ConversionVolumeActivity" />
         <activity android:name=".ConversionLengthActivity" />
         <activity android:name=".ConversionSpeedActivity" />

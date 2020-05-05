@@ -7,82 +7,153 @@
     tools:context=".TipCalculatorActivity">
 
 
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+    <EditText
+        android:id="@+id/tipCalcBillEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_toRightOf="@id/tipCalcTextView1"
+        android:inputType="number|numberDecimal"
         android:padding="5dp"
-        android:text="Enter bill amount: "
+        android:singleLine="true"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipCalcTextView1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tipCalcTextView1"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:paddingTop="10dp"
+        android:text="Enter Bill: "
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tipCalcBillEditText"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/et1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_toRightOf="@id/tv1"
-        android:inputType="number"
-        android:padding="5dp"
-        android:singleLine="true"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/tipCustomButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/buttonAccent5"
+        android:text="Custom"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+        app:layout_constraintTop_toBottomOf="@+id/tip15Button" />
 
     <TextView
-        android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv1"
-        android:layout_marginTop="24dp"
-        android:padding="5dp"
-        android:text="Enter Tip percentage: "
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et1" />
-
-    <EditText
-        android:id="@+id/et2"
+        android:id="@+id/tipCalcTipTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et1"
-        android:layout_marginTop="32dp"
-        android:layout_toRightOf="@id/tv2"
-        android:inputType="number"
-        android:padding="5dp"
-        android:singleLine="true"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        android:layout_below="@id/tipCustomButton"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomButton"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv2"
-        android:layout_marginTop="80dp"
-        android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@+id/tv3"
-        tools:layout_editor_absoluteX="16dp" />
-
     <TextView
-        android:id="@+id/tv3"
+        android:id="@+id/tipCalcNewBillTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="20dp"
         android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcTipTextView"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/tipCalcSplitEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="    1+"
+        android:inputType="number"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipCalcTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcBillEditText" />
+
+    <TextView
+        android:id="@+id/tipCalcTextView3"
+        android:layout_width="120sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="32dp"
+        android:paddingTop="10dp"
+        android:text="Split By:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tipCalcSplitEditText"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et2" />
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcTextView1" />
+
+    <Button
+        android:id="@+id/tip18Button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonAccent4"
+        android:text="18%"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tip20Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tip15Button"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcSplitEditText" />
+
+    <Button
+        android:id="@+id/tip10Button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonAccent1"
+        android:text="10%"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/tip15Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcTextView3" />
+
+    <Button
+        android:id="@+id/tip15Button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonAccent2"
+        android:text="15%"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tip18Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tip10Button"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcTextView3" />
+
+    <Button
+        android:id="@+id/tip20Button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonAccent3"
+        android:text="20%"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tip18Button"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcSplitEditText" />
+
+    <TextView
+        android:id="@+id/tipCalcSplitTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCalcNewBillTextView"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

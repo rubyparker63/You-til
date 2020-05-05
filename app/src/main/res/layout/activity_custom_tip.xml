@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomTipActivity">
+
+    <TextView
+        android:id="@+id/tipCusNewBillTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomTipTextView"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tipCustomTipTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipCustomButton"
+        android:layout_marginTop="16dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomButton"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/tipCustomSplitEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="  Enter 1 or more"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipCustomSplitTextView"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomBillEditText" />
+
+    <TextView
+        android:id="@+id/tipCustomSplitTextView"
+        android:layout_width="140sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="28dp"
+        android:paddingTop="10dp"
+        android:text="Split By:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tipCustomSplitEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomBillTextView" />
+
+    <EditText
+        android:id="@+id/tipCustomBillEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/tipCalcTextView1"
+        android:inputType="number|numberDecimal"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipCustomBillTextView"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/tipCustomBillTextView"
+        android:layout_width="140sp"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:text="Enter Bill: "
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tipCustomBillEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/tipCustomTextView"
+        android:layout_width="140sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="28dp"
+        android:paddingTop="10dp"
+        android:text="Custom Tip:"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/tipCustomEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitTextView" />
+
+    <EditText
+        android:id="@+id/tipCustomEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@id/tipCalcTextView1"
+        android:hint="   For 10% enter 10"
+        android:inputType="number|numberDecimal"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tipCustomTextView"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitEditText" />
+
+    <Button
+        android:id="@+id/tipCustomButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/buttonAccent5"
+        android:text="Enter"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomEditText" />
+
+    <TextView
+        android:id="@+id/tipCustSplitTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/tipCusNewBillTextView"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
