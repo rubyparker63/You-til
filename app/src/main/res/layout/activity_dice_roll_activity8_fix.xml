@@ -7,10 +7,19 @@
     tools:context=".DiceRollActivity8Fix">
 
     <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="591dp"
+        android:layout_height="825dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
+    <ImageView
         android:id="@+id/die8ImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

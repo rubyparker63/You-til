@@ -6,58 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".DiceRollSelectActivity">
 
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="599dp"
+        android:layout_height="792dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
     <TextView
         android:id="@+id/textViewDiceSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="@string/selectDieTitle"
         android:textColor="#000000"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView6Sided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/six_sided"
-        app:layout_constraintStart_toEndOf="@+id/textView4Sided"
-        app:layout_constraintTop_toBottomOf="@+id/die6ImageView" />
-
-    <TextView
-        android:id="@+id/textView8Sided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/eight_sided"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/die8ImageView" />
-
-    <TextView
-        android:id="@+id/textView10Sided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/ten_sided"
-        app:layout_constraintStart_toEndOf="@+id/textView8Sided"
-        app:layout_constraintTop_toBottomOf="@+id/die10ImageView" />
 
     <TextView
         android:id="@+id/textView12Sided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="16dp"
         android:text="@string/twelve_sided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/die12ImageView" />
@@ -66,23 +42,12 @@
         android:id="@+id/textView20Sided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="12dp"
         android:text="@string/twenty_sided"
         app:layout_constraintStart_toEndOf="@+id/textView12Sided"
         app:layout_constraintTop_toBottomOf="@+id/die20ImageView" />
-
-    <TextView
-        android:id="@+id/textView4Sided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/four_sided"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/die4ImageView" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
@@ -90,90 +55,27 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:id="@+id/die4ImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDiceSelect"
-        app:layout_constraintVertical_bias="0.047"
-        app:srcCompat="@drawable/dice4" />
-
-    <ImageView
         android:id="@+id/die6ImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toEndOf="@+id/die4ImageView"
         app:layout_constraintTop_toBottomOf="@+id/textViewDiceSelect"
-        app:layout_constraintVertical_bias="0.047"
+        app:layout_constraintVertical_bias="0.069"
         app:srcCompat="@drawable/dice6" />
 
     <ImageView
         android:id="@+id/die8ImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4Sided"
         app:srcCompat="@drawable/dice8" />
-
-    <ImageView
-        android:id="@+id/die10ImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@+id/die8ImageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView6Sided"
-        app:srcCompat="@drawable/dice10" />
-
-    <ImageView
-        android:id="@+id/die12ImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8Sided"
-        app:srcCompat="@drawable/dice12" />
-
-    <ImageView
-        android:id="@+id/die20ImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toEndOf="@+id/die12ImageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView10Sided"
-        app:srcCompat="@drawable/dice20" />
-
-    <Button
-        android:id="@+id/die4button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/die4ImageView"
-        app:layout_constraintEnd_toEndOf="@+id/die4ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die4ImageView" />
-
-    <Button
-        android:id="@+id/die6Button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/die6ImageView"
-        app:layout_constraintStart_toStartOf="@+id/die6ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die6ImageView" />
 
     <Button
         android:id="@+id/die8Button"
@@ -188,28 +90,68 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/die10Button"
+        android:id="@+id/die6Button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView10Sided"
-        app:layout_constraintEnd_toEndOf="@+id/die10ImageView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/die10ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die10ImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/die6ImageView"
+        app:layout_constraintStart_toStartOf="@+id/die6ImageView"
+        app:layout_constraintTop_toTopOf="@+id/die6ImageView"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/die12Button"
+        android:id="@+id/die4button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/die12ImageView"
-        app:layout_constraintEnd_toEndOf="@+id/die12ImageView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/die12ImageView"
-        app:layout_constraintTop_toTopOf="@+id/die12ImageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/die4ImageView"
+        app:layout_constraintEnd_toEndOf="@+id/die4ImageView"
+        app:layout_constraintTop_toTopOf="@+id/die4ImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView4Sided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/four_sided"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/die4ImageView" />
+
+    <TextView
+        android:id="@+id/textView6Sided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/six_sided"
+        app:layout_constraintStart_toEndOf="@+id/textView4Sided"
+        app:layout_constraintTop_toBottomOf="@+id/die6ImageView" />
+
+    <ImageView
+        android:id="@+id/die20ImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toEndOf="@+id/die12ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView10Sided"
+        app:srcCompat="@drawable/dice20" />
+
+    <ImageView
+        android:id="@+id/die10ImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/die8ImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView6Sided"
+        app:srcCompat="@drawable/dice10" />
 
     <Button
         android:id="@+id/die20Button"
@@ -221,6 +163,75 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/die20ImageView"
         app:layout_constraintTop_toTopOf="@+id/die20ImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8Sided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/eight_sided"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/die8ImageView" />
+
+    <TextView
+        android:id="@+id/textView10Sided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/ten_sided"
+        app:layout_constraintStart_toEndOf="@+id/textView8Sided"
+        app:layout_constraintTop_toBottomOf="@+id/die10ImageView" />
+
+    <ImageView
+        android:id="@+id/die4ImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiceSelect"
+        app:layout_constraintVertical_bias="0.069"
+        app:srcCompat="@drawable/dice4" />
+
+    <Button
+        android:id="@+id/die10Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textView10Sided"
+        app:layout_constraintEnd_toEndOf="@+id/die10ImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/die10ImageView"
+        app:layout_constraintTop_toTopOf="@+id/die10ImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/die12ImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8Sided"
+        app:srcCompat="@drawable/dice12" />
+
+    <Button
+        android:id="@+id/die12Button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/die12ImageView"
+        app:layout_constraintEnd_toEndOf="@+id/die12ImageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/die12ImageView"
+        app:layout_constraintTop_toTopOf="@+id/die12ImageView"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

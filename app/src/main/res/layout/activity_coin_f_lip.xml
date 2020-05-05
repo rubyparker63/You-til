@@ -7,14 +7,15 @@
     tools:context=".CoinFLipActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="290dp"
-        android:layout_height="460dp"
-        app:layout_constraintBottom_toBottomOf="@+id/coinFlipButton"
+        android:id="@+id/imageView12"
+        android:layout_width="990dp"
+        android:layout_height="935dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/coin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
 
     <Button
         android:id="@+id/coinFlipButton"
@@ -28,8 +29,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.683"
+        app:layout_constraintVertical_bias="0.792"
         tools:text="Flip Coin" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="290dp"
+        android:layout_height="460dp"
+        app:layout_constraintBottom_toBottomOf="@+id/coinFlipButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/coin" />
 
     <TextView
         android:id="@+id/textView6"
@@ -37,12 +48,12 @@
         android:layout_height="101dp"
         android:gravity="center"
         android:text=""
-        android:textSize="50dp"
         android:textColor="#000000"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/coinFlipButton"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintVertical_bias="0.506" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

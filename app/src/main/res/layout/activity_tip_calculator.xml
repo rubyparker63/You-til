@@ -7,11 +7,20 @@
     tools:context=".TipCalculatorActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="667dp"
+        android:layout_height="823dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="72dp"
         android:padding="5dp"
         android:text="Enter bill amount: "
         android:textSize="20sp"

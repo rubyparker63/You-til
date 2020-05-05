@@ -9,11 +9,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
+    private Button button2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         Button calcActivityBtn = (Button) findViewById(R.id.calcMainButton);
         calcActivityBtn.setOnClickListener(new View.OnClickListener() {
@@ -69,4 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 }
