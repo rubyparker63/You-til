@@ -46,80 +46,53 @@ public class ConversionTempActivity extends AppCompatActivity {
         });
     }
 
-    private void sameUnit(double num, int unit)  {
-        String degree = "";
-        if(unit == 0){
-            degree = "K";
-        }
-        else if(unit == 1){
-            degree = "°C";
-        }
-        else{
-            degree = "°F";
-        }
-
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(num + " " + degree);
-    }
-    private void celsiusToKelvin(double num)  {
-        double answer = num + 273.15;
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " K");
-    }
-    private void fahrenheitToKelvin(double num)  {
-        double answer = (num - 32.0) * (5.0/9.0) + 285.928;
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " K");
-    }
-    private void kelvinToCelsius(double num)  {
-        double answer = num - 273.15;
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " °C");
-    }
-    private void fahrenheitToCelsius(double num)  {
-        double answer = (num - 32.0) * (5.0/9.0);
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " °C");
-    }
-    private void kelvinToFahrenheit(double num)  {
-        double answer = (num - 273.15) * (9.0/5.0) + 32;
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " °F");
-    }
-    private void celsiusToFahrenheit(double num)  {
-        double answer = (num * 9.0) /5.0 + 32;
-        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-        resultTextView.setText(answer + " °F");
-    }
-
     public void convertTemp(int from, int to, double origNumber){
 
-        if (from == to){
-            sameUnit(origNumber, from);
+        TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
+        double answer = 0;
+        String unit = "";
+        if(to == 0){
+            unit = " K";
         }
-        else if (from == 1 && to == 0){
-            celsiusToKelvin(origNumber);
-        }
-        else if (from == 2 && to == 0){
-            fahrenheitToKelvin(origNumber);
-        }
-        else if (from == 0 && to == 1){
-            kelvinToCelsius(origNumber);
-        }
-        else if (from == 2 && to == 1){
-            fahrenheitToCelsius (origNumber);
-        }
-        else if (from == 0 && to == 2){
-            kelvinToFahrenheit(origNumber);
-        }
-        else if (from == 1 && to == 2){
-            celsiusToFahrenheit(origNumber);
+        else if(to == 1){
+            unit = " °C";
         }
         else{
-                //error message
-                TextView resultTextView = (TextView) findViewById(R.id.convToTempTextView);
-                resultTextView.setText("Error");
+            unit = " °F";
+        }
+
+        if (from == to){
+            answer = origNumber;
+        }
+        else if (from == 1 && to == 0){
+            //celsius to Kelvin
+            answer= origNumber + 273.15;
+        }
+        else if (from == 2 && to == 0){
+            //fahrenheit to Kelvin
+            answer= (origNumber - 32.0) * (5.0/9.0) + 285.928;
+        }
+        else if (from == 0 && to == 1){
+            //kelvin to Celsius
+            answer= origNumber - 273.15;
+        }
+        else if (from == 2 && to == 1){
+            //fahrenheit to Celsius
+            answer= (origNumber - 32.0) * (5.0/9.0);
+        }
+        else if (from == 0 && to == 2){
+            //kelvin to Fahrenheit
+            answer= (origNumber - 273.15) * (9.0/5.0) + 32;
+        }
+        else if (from == 1 && to == 2){
+            //celsius to Fahrenheit
+            answer= (origNumber * 9.0) /5.0 + 32;
+        }
+        else{
+            //error message
+            unit = "error";
 
             }
+        resultTextView.setText(answer + unit);
         }
 }

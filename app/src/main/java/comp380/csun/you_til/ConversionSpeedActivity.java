@@ -39,8 +39,6 @@ public class ConversionSpeedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText speedInputET = (EditText) findViewById(R.id.speedInputEditText);
                 double speedInput = Double.parseDouble(speedInputET.getText().toString());
-
-
                 int from = speedSpinnerFrom.getSelectedItemPosition();
                 int to = speedSpinnerTo.getSelectedItemPosition();
                 convert(from, to, speedInput);
@@ -49,133 +47,79 @@ public class ConversionSpeedActivity extends AppCompatActivity {
 
     }
 
-
-    private void sameUnit(double num, int x)  {
+    public void convert(int from, int to, double origNumber){
+        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
         String unit = "";
-        if(x == 0){
-            unit = "m/h";
+        double answer = 0.0;
+        if(to == 0){
+            unit = " m/h";
         }
-        else if(x == 1){
-            unit = "ft/s";
+        else if(to == 1){
+            unit = " ft/s";
         }
-        else if(x == 2){
-            unit = "km/hr";
+        else if(to == 2){
+            unit = " km/hr";
         }
         else{
-            unit = "me/s";
+            unit = " me/s";
         }
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(num + " " + unit);
-    }
-    private void fpsTOmph(double num)  {
-        double answer = num / 1.46667;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " m/h");
-    }
-    private void kphTOmph(double num)  {
-        double answer = num / 1.60934;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " m/h");
-    }
-    private void mpsTOmph(double num)  {
-        double answer = num * 2.23694;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " m/h");
-    }
-    private void mphTOfps(double num)  {
-        double answer = num * 1.46667;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " ft/s");
-    }
-    private void kphTOfps(double num)  {
-        double answer = num / 1.09728;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " ft/s");
-    }
-    private void mpsTofps(double num)  {
-        double answer = num * 3.28084;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " ft/s");
-    }
-    private void mphTOkph(double num)  {
-        double answer = num * 1.06934;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " km/hr");
-    }
-    private void fpsTOkph(double num)  {
-        double answer = num * 1.09728;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " km/hr");
-    }
-    private void mpsTPkph(double num)  {
-        double answer = num * 3.6;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " km/hr");
-    }
-    private void mphTOmps(double num)  {
-        double answer = num / 2.23694;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " me/s");
-    }
-    private void fpsTOmps(double num)  {
-        double answer = num / 3.28084;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " me/s");
-    }
-    private void kphTOmps(double num)  {
-        double answer = num / 3.6;
-        TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-        resultTextView.setText(answer + " me/s");
-    }
-
-
-    public void convert(int from, int to, double origNumber){
 
         if (from == to){
-            sameUnit(origNumber, from);
+            answer = origNumber;
         }
         else if (from == 1 && to == 0){
-            fpsTOmph(origNumber);
+            //fps to mph
+            answer = origNumber / 1.46667;
         }
         else if (from == 2 && to == 0){
-            kphTOmph(origNumber);
+            //kph to mph
+            answer = origNumber / 1.60934;
         }
         else if (from == 3 && to == 0){
-            mpsTOmph(origNumber);
+            //mps to mph
+            answer = origNumber * 2.23694;
         }
         else if (from == 0 && to == 1){
-            mphTOfps(origNumber);
+            //mph to fps
+            answer = origNumber * 1.46667;
         }
         else if (from == 2 && to == 1){
-            kphTOfps (origNumber);
+            //kph to fps
+            answer = origNumber / 1.09728;
         }
         else if (from == 3 && to == 1){
-            mpsTofps(origNumber);
+            //mps to fps
+            answer = origNumber * 3.28084;
         }
         else if (from == 0 && to == 2){
-            mphTOkph(origNumber);
+            //mph to kph
+            answer = origNumber * 1.06934;
         }
         else if (from == 1 && to == 2){
-            fpsTOkph(origNumber);
+            //fps to kph
+            answer = origNumber * 1.09728;
         }
         else if (from == 3 && to == 2){
-            mpsTPkph(origNumber);
+           // mps to kph
+            answer = origNumber * 3.6;
         }
         else if (from == 0 && to == 3){
-            mphTOmps(origNumber);
+            //mph to mps
+            answer = origNumber / 2.23694;
         }
         else if (from == 1 && to == 3){
-            fpsTOmps(origNumber);
+            //fps to mps
+            answer = origNumber / 3.28084;
         }
         else if (from == 2 && to == 3){
-            kphTOmps(origNumber);
+            //kph to mps
+            answer = origNumber / 3.6;
         }
 
         else{
             //error message
-            TextView resultTextView = (TextView) findViewById(R.id.speedTextView2);
-            resultTextView.setText("Error");
-
+            unit = "error";
         }
+        resultTextView.setText(answer + unit);
     }
 }

@@ -41,283 +41,170 @@ public class ConversionLengthActivity extends AppCompatActivity {
 
                 int from = lengthSpinnerFrom.getSelectedItemPosition();
                 int to = lengthSpinnerTo.getSelectedItemPosition();
-                String unit = lengthSpinnerTo.getSelectedItem().toString();
-                convert(from, to, lengthInput, unit);
+                convert(from, to, lengthInput);
 
             }
         });
 
     }
-    //to inches
-    private void feetToInches(double num)  {
-        double answer = num * 12.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Inches");
-    }
-    private void milesToInches(double num)  {
-        double answer = num * 63360.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Inches");
-    }
-    private void yardsToInches(double num)  {
-        double answer = num * 36.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Inches");
-    }
-    private void metersToInches(double num)  {
-        double answer = num * 39.37;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Inches");
-    }
-    private void kilometersToInches(double num)  {
-        double answer = num * 39370.07874;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Inches");
-    }
-    private void sameUnit(double num, String unit)  {
+    
 
+    public void convert(int from, int to, double origNumber){
         TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(num + " " + unit);
-    }
-    //to feet
-    private void milesToFeet(double num)  {
-        double answer = num * 5280.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Feet");
-    }
-    private void yardsToFeet(double num)  {
-        double answer = num * 3.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Feet");
-    }
-    private void metersToFeet(double num)  {
-        double answer = num * 3.28084;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Feet");
-    }
-    private void kilometersToFeet(double num)  {
-        double answer = num * 3280.84;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Feet");
-    }
-    private void inchesToFeet(double num)  {
-        double answer = num / 12.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Feet");
-    }
-    //to miles
-    private void feetToMiles(double num)  {
-        double answer = num / 5280.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    private void yardsToMiles(double num)  {
-        double answer = num / 1760.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    private void metersToMiles(double num)  {
-        double answer = num / 1609.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    private void kilometersToMiles(double num)  {
-        double answer = num / 1.6090;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    private void inchesToMiles(double num)  {
-        double answer = num / 63360.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    //to Yards
-    private void feetToYards(double num)  {
-        double answer = num / 3.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Yards");
-    }
-    private void milesToYards(double num)  {
-        double answer = num * 1760.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Miles");
-    }
-    private void metersToYards(double num)  {
-        double answer = num * 1.09361;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Yards");
-    }
-    private void kilometersToYards(double num)  {
-        double answer = num * 1093.61;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Yards");
-    }
-    private void inchesToYards(double num)  {
-        double answer = num / 36.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Yards");
-    }
-    //to Meters
-    private void feetToMeters(double num)  {
-        double answer = num / 3.28084;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Meters");
-    }
-    private void milesToMeters(double num)  {
-        double answer = num * 1609.0;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Meters");
-    }
-    private void yardsToMeters(double num)  {
-        double answer = num / 1.09361;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Meters");
-    }
-    private void kilometersToMeters(double num)  {
-        double answer = num * 1000;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Meters");
-    }
-    private void inchesToMeters(double num)  {
-        double answer = num / 39.37;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Meters");
-    }
-    //to Kilometers
-    private void feetToKilometers(double num)  {
-        double answer = num / 3280.84;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Kilometers");
-    }
-    private void milesToKilometers(double num)  {
-        double answer = num * 1.6090;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Kilometers");
-    }
-    private void yardsToKilometers(double num)  {
-        double answer = num / 1093.61;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Kilometers");
-    }
-    private void metersToKilometers(double num)  {
-        double answer = num / 1000;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Kilometers");
-    }
-    private void inchesToKilometers(double num)  {
-        double answer = num / 39370.07874;
-        TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-        resultTextView.setText(answer + " Kilometers");
-    }
+        String unit = "";
+        if(to == 0){
+            unit = " km";
+        }
+        else if(to == 1){
+            unit = " m";
+        }
+        else if(to == 2){
+            unit = " miles";
+        }
+        else if(to == 3){
+            unit = " y";
+        }
+        else if(to == 4){
+            unit = " ft";
+        }
+        else{
+            unit = " in";
+        }
 
-
-
-    public void convert(int from, int to, double origNumber, String unit){
-
-
+        double answer = 0.0;
         if (from == to){
-            sameUnit(origNumber, unit);
+            answer = origNumber;
         }
         else if (from == 4 && to == 5){
-            feetToInches(origNumber);
+            //feet to Inches(double num)  {
+            answer = origNumber * 12.0;
         }
         else if (from == 2 && to == 5){
-            milesToInches(origNumber);
+            //miles to Inches
+            answer = origNumber * 63360.0;
         }
         else if (from == 3 && to == 5){
-            yardsToInches(origNumber);
+            //yards to Inches
+            answer = origNumber * 36.0;
         }
         else if (from == 1 && to == 5){
-            metersToInches(origNumber);
+            //meters to Inches
+            answer = origNumber * 39.37;
         }
         else if (from == 0 && to == 5){
-            kilometersToInches(origNumber);
+            //kilometers to Inches
+            answer = origNumber * 39370.07874;
         }
-//to Feet
+        //to Feet
         else if (from == 5 && to == 4){
-            inchesToFeet(origNumber);
+            //inches to Feet
+            answer = origNumber / 12.0;
         }
         else if (from == 2 && to == 4){
-            milesToFeet(origNumber);
+            //miles to Feet
+            answer = origNumber * 5280.0;
         }
         else if (from == 3 && to == 4){
-            yardsToFeet(origNumber);
+            //yards to Feet
+            answer = origNumber * 3.0;
         }
         else if (from == 1 && to == 4){
-            metersToFeet(origNumber);
+            //meters to Feet
+            answer = origNumber * 3.28084;
         }
         else if (from == 0 && to == 4){
-            kilometersToFeet(origNumber);
+            //kilometers to Feet
+            answer = origNumber * 3280.84;
         }
-//to Miles
+        //to Miles
         else if (from == 5 && to == 2){
-            inchesToMiles(origNumber);
+            //inches to Miles
+            answer = origNumber / 63360.0;
         }
         else if (from == 4 && to == 2){
-            feetToMiles(origNumber);
+            //feet to Miles
+            answer = origNumber / 5280.0;
         }
         else if (from == 3 && to == 2){
-            yardsToMiles(origNumber);
+            //yards to Miles
+            answer = origNumber / 1760.0;
         }
         else if (from == 1 && to == 2){
-            metersToMiles(origNumber);
+            //meters to Miles
+            answer = origNumber / 1609.0;
         }
         else if (from == 0 && to == 2){
-            kilometersToMiles(origNumber);
+            //kilometers to Miles
+            answer = origNumber / 1.6090;
         }
 //to Yards
         else if (from == 5 && to == 3){
-            inchesToYards(origNumber);
+            //inches to Yards
+            answer = origNumber / 36.0;
         }
         else if (from == 4 && to == 3){
-            feetToYards(origNumber);
+            //feet to Yards
+            answer = origNumber / 3.0;
         }
         else if (from == 2 && to == 3){
-            milesToYards(origNumber);
+            //miles to Yards
+            answer = origNumber * 1760.0;
         }
         else if (from == 1 && to == 3){
-            metersToYards(origNumber);
+            //meters to Yards
+            answer = origNumber * 1.09361;
         }
         else if (from == 0 && to == 3){
-            kilometersToYards(origNumber);
+            //kilometers to Yards
+            answer = origNumber * 1093.61;
         }
 //to Meters
         else if (from == 5 && to == 1){
-            inchesToMeters(origNumber);
+            //inches to Meters
+            answer = origNumber / 39.37;
         }
         else if (from == 4 && to == 1){
-            feetToMeters(origNumber);
+            //feet to Meters
+            answer = origNumber / 3.28084;
         }
         else if (from == 2 && to == 1){
-            milesToMeters(origNumber);
+            //miles to Meters
+            answer = origNumber * 1609.0;
         }
         else if (from == 3 && to == 1){
-            yardsToMeters(origNumber);
+            //yards to Meters
+            answer = origNumber / 1.09361;
         }
         else if (from == 0 && to == 1){
-            kilometersToMeters(origNumber);
+            //kilometers to Meters
+            answer = origNumber * 1000;
         }
 //to Meters
         else if (from == 5 && to == 0){
-            inchesToKilometers(origNumber);
+            //inches to Kilometers
+            answer = origNumber / 39370.07874;
         }
         else if (from == 4 && to == 0){
-            feetToKilometers(origNumber);
+            //feet to Kilometers
+            answer = origNumber / 3280.84;
         }
         else if (from == 2 && to == 0){
-            milesToKilometers(origNumber);
+            //miles to Kilometers
+            answer = origNumber * 1.6090;
         }
         else if (from == 3 && to == 0){
-            yardsToKilometers(origNumber);
+            //yards to Kilometers
+            answer = origNumber / 1093.61;
         }
         else if (from == 1 && to == 0){
-            metersToKilometers(origNumber);
+            //meters to Kilometers
+            answer = origNumber / 1000;
         }
         else{
-            TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
-            resultTextView.setText("Error");
             //error message
+            unit = "error";
         }
+        resultTextView.setText(answer + unit);
 
 
 
