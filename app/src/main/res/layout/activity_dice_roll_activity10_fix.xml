@@ -43,7 +43,6 @@
         android:id="@+id/die10TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10"
         android:textColor="#000000"
         android:textSize="75sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"

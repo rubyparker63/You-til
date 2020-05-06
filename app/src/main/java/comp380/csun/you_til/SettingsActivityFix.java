@@ -85,6 +85,22 @@ public class SettingsActivityFix extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
+                if(calcSwitch.isChecked() != calcState) {
+                    calcSwitch.setChecked(calcState);
+                }
+                if(tipSwitch.isChecked() != tipState) {
+                    tipSwitch.setChecked(tipState);
+                }
+                if(conSwitch.isChecked() != conState) {
+                    conSwitch.setChecked(conState);
+                }
+                if(diceSwitch.isChecked() != diceState) {
+                    diceSwitch.setChecked(diceState);
+                }
+                if(coinSwitch.isChecked() != coinState) {
+                    coinSwitch.setChecked(coinState);
+                }
+
                 editor.putBoolean(CALSWITCH, calcSwitch.isChecked());
                 editor.putBoolean(TISWITCH, tipSwitch.isChecked());
                 editor.putBoolean(CONVSWITCH, conSwitch.isChecked());
@@ -121,28 +137,6 @@ public class SettingsActivityFix extends AppCompatActivity {
 //    }
 
     public void loadData() {
-//        Button mainCalc1 = (Button) findViewById(R.id.calcMainButton);
-//        Button mainTip1 = (Button) findViewById(R.id.tipCalcMainButton);
-//        Button mainConv1 = (Button) findViewById(R.id.conversionMainButton);
-//        Button mainDice1 = (Button) findViewById(R.id.diceMainButton);
-//        Button mainCoin1 = (Button) findViewById(R.id.coinMainButton);
-
-//        if(calcState) {
-//            mainCalc1.setVisibility(View.INVISIBLE);
-//        }
-//        if(tipState == true) {
-//            mainTip1.setVisibility(View.INVISIBLE);
-//        }
-//        if(conState == true) {
-//            mainConv1.setVisibility(View.INVISIBLE);
-//        }
-//        if(diceState == true) {
-//            mainDice1.setVisibility(View.INVISIBLE);
-//        }
-//        if(coinState == true) {
-//            mainCoin1.setVisibility(View.INVISIBLE);
-//        }
-
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         calcState = sharedPreferences.getBoolean(CALSWITCH, false);
         tipState = sharedPreferences.getBoolean(TISWITCH, false);

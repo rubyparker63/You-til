@@ -3,6 +3,7 @@ package comp380.csun.you_til;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,10 +18,32 @@ import java.math.BigDecimal;
 
 public class TipCalculatorActivity extends AppCompatActivity {
 
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String CALSWITCH = "calswitch";
+    public static final String TISWITCH = "tiswitch";
+    public static final String CONVSWITCH = "convswitch";
+    public static final String DSWITCH = "dswitch";
+    public static final String CSWITCH = "cswitch";
+
+    SharedPreferences sharedPreferences;
+    boolean calcState;
+    boolean tipState;
+    boolean conState;
+    boolean diceState;
+    boolean coinState;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tip_calculator);
+
+        invalidateOptionsMenu();
+        sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        calcState = sharedPreferences.getBoolean(CALSWITCH, false);
+        tipState = sharedPreferences.getBoolean(TISWITCH, false);
+        conState = sharedPreferences.getBoolean(CONVSWITCH, false);
+        diceState = sharedPreferences.getBoolean(DSWITCH, false);
+        coinState = sharedPreferences.getBoolean(CSWITCH, false);
 
         Button tip10Btn = (Button) findViewById(R.id.tip10Button);
         tip10Btn.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +127,29 @@ public class TipCalculatorActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.quick_acess, menu);
+
+        MenuItem dropCalc = menu.findItem(R.id.calculatorItem);
+        MenuItem dropTip = menu.findItem(R.id.tipCalculatorItem);
+        MenuItem dropConv = menu.findItem(R.id.conversionsItem);
+        MenuItem dropDice = menu.findItem(R.id.dieRollItem);
+        MenuItem dropCoin = menu.findItem(R.id.coinFlipItem);
+
+        if(calcState) {
+            dropCalc.setVisible(false);
+        }
+        if(tipState) {
+            dropTip.setVisible(false);
+        }
+        if(conState) {
+            dropConv.setVisible(false);
+        }
+        if(diceState) {
+            dropDice.setVisible(false);
+        }
+        if(coinState) {
+            dropCoin.setVisible(false);
+        }
+
         return true;
     }
     @Override
