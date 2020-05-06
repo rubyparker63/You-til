@@ -3,22 +3,42 @@ package comp380.csun.you_til;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+//import android.widget.Switch;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String CALSWITCH = "calswitch";
+    public static final String TISWITCH = "tiswitch";
+    public static final String CONVSWITCH = "convswitch";
+    public static final String DSWITCH = "dswitch";
+    public static final String CSWITCH = "cswitch";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        boolean calcState = sharedPreferences.getBoolean(CALSWITCH, false);
+        boolean tipState = sharedPreferences.getBoolean(TISWITCH, false);
+        boolean conState = sharedPreferences.getBoolean(CONVSWITCH, false);
+        boolean diceState = sharedPreferences.getBoolean(DSWITCH, false);
+        boolean coinState = sharedPreferences.getBoolean(CSWITCH, false);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button calcActivityBtn = (Button) findViewById(R.id.calcMainButton);
+        Button coinFlipActivityBtn = (Button) findViewById(R.id.coinMainButton);
+        Button conversionActivityBtn = (Button) findViewById(R.id.conversionMainButton);
+        Button diceRollActivityBtn = (Button) findViewById(R.id.diceMainButton);
+        Button tipCalcActivityBtn = (Button) findViewById(R.id.tipCalcMainButton);
+
         calcActivityBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -29,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //main menu
-        Button coinFlipActivityBtn = (Button) findViewById(R.id.coinMainButton);
         coinFlipActivityBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -39,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button conversionActivityBtn = (Button) findViewById(R.id.conversionMainButton);
         conversionActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button diceRollActivityBtn = (Button) findViewById(R.id.diceMainButton);
         diceRollActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button tipCalcActivityBtn = (Button) findViewById(R.id.tipCalcMainButton);
         tipCalcActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +81,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToTipCalc);
             }
         });
+
+        if(calcState) {
+            calcActivityBtn.setVisibility(View.GONE);
+        }
+        if(tipState) {
+            tipCalcActivityBtn.setVisibility(View.GONE);
+        }
+        if(conState) {
+            conversionActivityBtn.setVisibility(View.GONE);
+        }
+        if(diceState) {
+            diceRollActivityBtn.setVisibility(View.GONE);
+        }
+        if(coinState) {
+            coinFlipActivityBtn.setVisibility(View.GONE);
+        }
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

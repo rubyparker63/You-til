@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivityFix">
+    tools:context=".SettingsActivityFix"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/settingsTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/action_settings"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +26,7 @@
         android:layout_marginTop="12dp"
         android:text="Hide Calculator"
         android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +39,7 @@
         android:layout_marginTop="12dp"
         android:text="Hide Tip Calculator"
         android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +52,7 @@
         android:layout_marginTop="12dp"
         android:text="Hide Conversions"
         android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +65,7 @@
         android:layout_marginTop="12dp"
         android:text="Hide Dice"
         android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,17 +78,19 @@
         android:layout_marginTop="12dp"
         android:text="Hide Coin"
         android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hideDiceSwitch" />
 
     <Button
-        android:id="@+id/settingsCancleButton"
+        android:id="@+id/settingsCancelButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="44dp"
-        android:text="Cancle"
+        android:text="Cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/settingsSaveButton"
@@ -92,10 +100,11 @@
         android:id="@+id/settingsSaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="44dp"
         android:text="Save"
-        app:layout_constraintEnd_toStartOf="@+id/settingsCancleButton"
+        app:layout_constraintEnd_toStartOf="@+id/settingsCancelButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hideCoinSwitch" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

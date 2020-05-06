@@ -1,6 +1,8 @@
 package comp380.csun.you_til;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -18,11 +20,19 @@ import androidx.appcompat.widget.Toolbar;
 
 public class QuickAcessActivity extends AppCompatActivity {
 
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String CALSWITCH = "calswitch";
+    public static final String TISWITCH = "tiswitch";
+    public static final String CONVSWITCH = "convswitch";
+    public static final String DSWITCH = "dswitch";
+    public static final String CSWITCH = "cswitch";
+
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_quick_acess);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,12 +55,49 @@ public class QuickAcessActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.quick_acess, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        boolean calcState = sharedPreferences.getBoolean(CALSWITCH, false);
+        boolean tipState = sharedPreferences.getBoolean(TISWITCH, false);
+        boolean conState = sharedPreferences.getBoolean(CONVSWITCH, false);
+        boolean diceState = sharedPreferences.getBoolean(DSWITCH, false);
+        boolean coinState = sharedPreferences.getBoolean(CSWITCH, false);
+
+        MenuItem dropCalc = (MenuItem) findViewById(R.id.calculatorItem);
+        MenuItem dropTip = menu.findItem(R.id.tipCalculatorItem);
+        MenuItem dropConver = (MenuItem) findViewById(R.id.conversionsItem);
+        MenuItem dropDice = menu.findItem(R.id.dieRollItem);
+        MenuItem dropCoin = menu.findItem(R.id.coinFlipItem);
+
+        if(calcState) {
+            dropCalc.setVisible(false);
+        }
+        if(tipState) {
+            dropTip.setVisible(false);
+        }
+        if(conState) {
+            dropConver.setVisible(false);
+        }
+        if(diceState) {
+            dropDice.setVisible(false);
+        }
+        if(coinState) {
+            dropCoin.setVisible(false);
+        }
+
         return true;
     }
 
@@ -60,4 +107,6 @@ public class QuickAcessActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
