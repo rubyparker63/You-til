@@ -21,17 +21,28 @@ public class MainActivity extends AppCompatActivity {
     public static final String DSWITCH = "dswitch";
     public static final String CSWITCH = "cswitch";
 
+    SharedPreferences sharedPreferences;
+    boolean calcState;
+    boolean tipState;
+    boolean conState;
+    boolean diceState;
+    boolean coinState;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        boolean calcState = sharedPreferences.getBoolean(CALSWITCH, false);
-        boolean tipState = sharedPreferences.getBoolean(TISWITCH, false);
-        boolean conState = sharedPreferences.getBoolean(CONVSWITCH, false);
-        boolean diceState = sharedPreferences.getBoolean(DSWITCH, false);
-        boolean coinState = sharedPreferences.getBoolean(CSWITCH, false);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        calcState = sharedPreferences.getBoolean(CALSWITCH, false);
+        tipState = sharedPreferences.getBoolean(TISWITCH, false);
+        conState = sharedPreferences.getBoolean(CONVSWITCH, false);
+        diceState = sharedPreferences.getBoolean(DSWITCH, false);
+        coinState = sharedPreferences.getBoolean(CSWITCH, false);
+
+
+        invalidateOptionsMenu();
 
         Button calcActivityBtn = (Button) findViewById(R.id.calcMainButton);
         Button coinFlipActivityBtn = (Button) findViewById(R.id.coinMainButton);
@@ -83,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         if(calcState) {
-            calcActivityBtn.setVisibility(View.GONE);
+            calcActivityBtn.setVisibility(View.INVISIBLE);
         }
         if(tipState) {
             tipCalcActivityBtn.setVisibility(View.GONE);
@@ -99,14 +110,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.quick_acess, menu);
+
+        MenuItem dropCalc = menu.findItem(R.id.calculatorItem);
+        MenuItem dropTip = menu.findItem(R.id.tipCalculatorItem);
+        MenuItem dropConv = menu.findItem(R.id.conversionsItem);
+        MenuItem dropDice = menu.findItem(R.id.dieRollItem);
+        MenuItem dropCoin = menu.findItem(R.id.coinFlipItem);
+
+        if(calcState) {
+            dropCalc.setVisible(false);
+        }
+        if(tipState) {
+            dropTip.setVisible(false);
+        }
+        if(conState) {
+            dropConv.setVisible(false);
+        }
+        if(diceState) {
+            dropDice.setVisible(false);
+        }
+        if(coinState) {
+            dropCoin.setVisible(false);
+        }
+
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+
         switch (item.getItemId()){
             case R.id.calculatorItem:
                 Intent goToCalculatorItem = new Intent(getApplicationContext(), CalculatorActivity.class);
@@ -133,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToSettingsItem);
                 return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
