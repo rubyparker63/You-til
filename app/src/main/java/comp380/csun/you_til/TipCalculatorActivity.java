@@ -1,7 +1,6 @@
 package comp380.csun.you_til;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -28,7 +27,6 @@ public class TipCalculatorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double ten = 0.10;
                 calculateTip(ten);
-
             }
         });
 
@@ -82,6 +80,7 @@ public class TipCalculatorActivity extends AppCompatActivity {
                 double tipCalcTip = tipCalcBillInput * percent;
                 tipCalcTipTextView.setText("Your Tip is: $" + tipCalcTip);
                 tipCalcNewBillTextView.setText("Your Bill with Tip is: $" + newBill);
+                tipCalcSplitTextView.setText("");
             }
             else{
                 double newBill = (tipCalcBillInput * percent) + tipCalcBillInput;
