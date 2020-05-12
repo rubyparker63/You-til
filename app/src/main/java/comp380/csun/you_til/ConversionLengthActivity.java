@@ -76,10 +76,11 @@ public class ConversionLengthActivity extends AppCompatActivity {
 
     }
 
-
+    //convert takes a in the units that are being converted between and the number being converted.
     public void convert(int from, int to, double origNumber){
         TextView resultTextView = (TextView) findViewById(R.id.lengthTextView2);
         String unit = "";
+        //unit is assigned a value depending on what the is selected in the to spinner
         if(to == 0){
             unit = " km";
         }
@@ -100,6 +101,7 @@ public class ConversionLengthActivity extends AppCompatActivity {
         }
 
         double answer = 0.0;
+        //The original number is transformed into the answer depending on what units were selected.
         if (from == to){
             answer = origNumber;
         }
@@ -266,6 +268,7 @@ public class ConversionLengthActivity extends AppCompatActivity {
 
         return true;
     }
+    //Navigation of drop down menu for ease of movement through the app
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){

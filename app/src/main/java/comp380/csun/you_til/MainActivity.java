@@ -43,13 +43,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         invalidateOptionsMenu();
-
+        //Button decelerations and assignments for the main page
         Button calcActivityBtn = (Button) findViewById(R.id.calcMainButton);
         Button coinFlipActivityBtn = (Button) findViewById(R.id.coinMainButton);
         Button conversionActivityBtn = (Button) findViewById(R.id.conversionMainButton);
         Button diceRollActivityBtn = (Button) findViewById(R.id.diceMainButton);
         Button tipCalcActivityBtn = (Button) findViewById(R.id.tipCalcMainButton);
-
+        //on click listeners to tell the app what to do when you push a button
         calcActivityBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToCalc);
             }
         });
-
-        //main menu
         coinFlipActivityBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -68,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToCoin);
             }
         });
-
         conversionActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToConversion);
             }
         });
-
         diceRollActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(goToDiceSelect);
             }
         });
-
         tipCalcActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
-
+    //Navigation of drop down menu for ease of movement through the app
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
 
