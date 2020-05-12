@@ -169,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent goToSettingsItem = new Intent(getApplicationContext(), SettingsActivityFix.class);
                 startActivity(goToSettingsItem);
                 return true;
+            case R.id.homeItem:
+                Intent goToHomeItem = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(goToHomeItem);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
