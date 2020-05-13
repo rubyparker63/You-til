@@ -11,6 +11,7 @@
         android:layout_width="802dp"
         android:layout_height="737dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/purplecoveryeeeeee" />
@@ -75,6 +76,7 @@
         android:id="@+id/tipCustomBillEditText"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginTop="64dp"
         android:layout_toRightOf="@id/tipCalcTextView1"
         android:inputType="number|numberDecimal"
         android:padding="5dp"
@@ -83,19 +85,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tipCustomBillTextView"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tipCustomBillTextView"
         android:layout_width="140sp"
         android:layout_height="50dp"
+        android:layout_marginTop="68dp"
         android:paddingTop="10dp"
         android:text="Enter Bill: "
         android:textSize="25dp"
         app:layout_constraintEnd_toStartOf="@+id/tipCustomBillEditText"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tipCustomTextView"
@@ -105,10 +108,12 @@
         android:paddingTop="10dp"
         android:text="Custom Tip:"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tipCustomEditText"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitTextView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/tipCustomEditText"
@@ -121,10 +126,12 @@
         android:padding="5dp"
         android:singleLine="true"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tipCustomTextView"
-        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/tipCustomSplitEditText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/tipCustomButton"
