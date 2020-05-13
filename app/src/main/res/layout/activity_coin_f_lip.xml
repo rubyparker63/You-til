@@ -17,6 +17,16 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/purplecoveryeeeeee" />
 
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="435dp"
+        android:layout_height="621dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flowerbackground5" />
+
     <Button
         android:id="@+id/coinFlipButton"
         android:layout_width="188dp"

@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".CustomTipActivity">
 
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="802dp"
+        android:layout_height="737dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/purplecoveryeeeeee" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="421dp"
+        android:layout_height="621dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flowerbackground5" />
+
     <TextView
         android:id="@+id/tipCusNewBillTextView"
         android:layout_width="match_parent"

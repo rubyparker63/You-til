@@ -15,11 +15,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/purplecoveryeeeeee" />
 
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="427dp"
+        android:layout_height="623dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flowerbackground5" />
+
     <Button
         android:id="@+id/rollDie12button"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:background="@color/buttonAccent1"
         android:text="Roll Die"
         android:textSize="24sp"

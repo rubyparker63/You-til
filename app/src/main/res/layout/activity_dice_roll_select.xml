@@ -15,6 +15,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/purplecoveryeeeeee" />
 
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="433dp"
+        android:layout_height="625dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flowerbackground5" />
+
     <TextView
         android:id="@+id/textViewDiceSelect"
         android:layout_width="wrap_content"

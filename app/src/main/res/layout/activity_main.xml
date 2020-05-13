@@ -12,15 +12,47 @@
         android:layout_width="633dp"
         android:layout_height="821dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/purplecoveryeeeeee" />
+
+    <ImageView
+        android:id="@+id/grass"
+        android:layout_width="460dp"
+        android:layout_height="616dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538"
+        app:srcCompat="@drawable/flowerbackground4" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="408dp"
+        android:layout_height="426dp"
+        app:layout_constraintBottom_toTopOf="@+id/conversionMainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bear" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="514dp"
+        android:layout_height="458dp"
+        app:layout_constraintBottom_toTopOf="@+id/coinMainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/catorange4" />
 
     <Button
         android:id="@+id/calcMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="116dp"
         android:background="@color/buttonAccent1"
         android:text="Calculator"
         android:textAllCaps="false"
@@ -34,7 +66,7 @@
         android:id="@+id/diceMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@color/buttonAccent4"
         android:text="Dice Roll"
         android:textAllCaps="false"
@@ -47,7 +79,7 @@
         android:id="@+id/conversionMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:background="@color/buttonAccent5"
         android:text="Conversions"
         android:textAllCaps="false"
@@ -60,7 +92,7 @@
         android:id="@+id/coinMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="64dp"
         android:background="@color/buttonAccent3"
         android:text="Coin Flip"
         android:textAllCaps="false"
@@ -73,7 +105,7 @@
         android:id="@+id/tipCalcMainButton"
         android:layout_width="221dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@color/buttonAccent2"
         android:text="Tip Calculator"
         android:textAllCaps="false"
@@ -81,6 +113,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calcMainButton" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="507dp"
+        android:layout_height="394dp"
+        app:layout_constraintBottom_toTopOf="@+id/calcMainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bunny" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

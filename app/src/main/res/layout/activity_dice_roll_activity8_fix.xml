@@ -16,6 +16,16 @@
         app:srcCompat="@drawable/purplecoveryeeeeee" />
 
     <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="425dp"
+        android:layout_height="621dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flowerbackground5" />
+
+    <ImageView
         android:id="@+id/die8ImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,4 +60,5 @@
         app:layout_constraintStart_toStartOf="@+id/die8ImageView"
         app:layout_constraintTop_toTopOf="@+id/die8ImageView"
         app:layout_constraintVertical_bias="0.133" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
