@@ -86,6 +86,7 @@
         android:id="@+id/speedEnterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/buttonAccent2"
         android:text="Convert"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
