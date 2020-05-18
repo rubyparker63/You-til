@@ -48,7 +48,7 @@ public class DiceRollActivity12Fix extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 die12Txt.setText("");
-                int rand = (int)(Math.random()*8);
+                int rand = (int)(Math.random()*12);
 
                 if(rand == 0) {
                     die12Txt.setText("1");
