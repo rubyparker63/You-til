@@ -265,7 +265,12 @@ public class CalculatorActivity extends AppCompatActivity {
                     val1 = val1 * val2;
                     break;
                 case DIVISION:
-                    val1 = val1 / val2;
+                    if (val2==0) {
+
+                        textViewAnswer.setText("Can't divide by 0");
+
+                    }
+                        val1 = val1 / val2;
                     break;
                 case EQU:
                     break;
